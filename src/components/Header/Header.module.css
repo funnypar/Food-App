@@ -1,0 +1,7 @@
+.image {
+    height: 15rem;
+    width: 100vw;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    filter: blur(0.15rem);
+}

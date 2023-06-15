@@ -1,10 +1,11 @@
-import Nav from "./components/Nav/Nav";
+import react from "react";
+import Header from "./components/Header/Header";
 
 function App() {
     return (
-        <>
-            <Nav />
-        </>
+        <react.Fragment>
+            <Header />
+        </react.Fragment>
     );
 }
 
