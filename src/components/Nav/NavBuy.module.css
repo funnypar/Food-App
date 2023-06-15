@@ -1,0 +1,18 @@
+.container {
+    background-color: #b36b0e;
+    font-size: smaller;
+    border-radius: 99999px;
+    padding: 0.5rem 2rem;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.icon {
+    fill: white;
+}
+.number {
+    background-color: #ff9914;
+    padding: 0.1rem 1.25rem;
+    border-radius: 9999px;
+}
