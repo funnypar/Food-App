@@ -1,0 +1,21 @@
+.container {
+    color: white;
+    background-color: #3f3f3f;
+    z-index: 20;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    position: absolute;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1rem; */
+}
+.description__text {
+    color: snow;
+    font-weight: 400;
+    text-align: center;
+    width: 80%;
+}
