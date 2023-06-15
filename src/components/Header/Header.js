@@ -7,7 +7,7 @@ const Header = () => {
         <react.Fragment>
             <Nav />
             <img
-                src={require("./mehdi-pezhvak-nKjBbzQOI60-unsplash.jpg")}
+                src={require("../../media/mehdi-pezhvak-nKjBbzQOI60-unsplash.jpg")}
                 alt="food"
                 className={styles.image}
             />
