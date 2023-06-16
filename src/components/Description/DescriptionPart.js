@@ -1,5 +1,5 @@
 import styles from "./DescriptionPart.module.css";
-import Card from "../UI/Card";
+import Card from "../UI/Card/Card";
 
 const DesriptionPart = () => {
     return (

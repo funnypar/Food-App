@@ -1,11 +1,13 @@
-import Card from "../UI/Card";
+import Card from "../UI/Card/Card";
 import Item from "./Item";
 import styles from "./ListItems.module.css";
 
-const ListItems = () => {
+const ListItems = (props) => {
     return (
         <Card className={styles.container}>
-            <Item />
+            {props.datas.map((data) => {
+                return <Item data={data} />;
+            })}
         </Card>
     );
 };

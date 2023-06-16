@@ -1,0 +1,19 @@
+.btn {
+    width: 65%;
+    padding: 0.5rem 1rem;
+    font-size: medium;
+    font-weight: 600;
+    color: white;
+    border-radius: 1rem;
+    background-color: brown;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
+    transition: all 0.2s;
+    transform: scale(1.01);
+}
+
+.btn:hover {
+    box-shadow: none;
+    transform: scale(1);
+}
