@@ -6,7 +6,7 @@ const ListItems = (props) => {
     return (
         <Card className={styles.container}>
             {props.datas.map((data) => {
-                return <Item data={data} />;
+                return <Item data={data} key={data.id} />;
             })}
         </Card>
     );
