@@ -1,11 +1,11 @@
 import NavBuy from "./NavBuy";
 import styles from "./Nav.module.css";
 
-const Nav = () => {
+const Nav = (props) => {
     return (
         <nav>
             <h1 className={styles.header}>IranianMeals</h1>
-            <NavBuy />
+            <NavBuy userInput={props.userInput} />
         </nav>
     );
 };

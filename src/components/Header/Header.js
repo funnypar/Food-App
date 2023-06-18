@@ -2,10 +2,10 @@ import react from "react";
 import styles from "./Header.module.css";
 import Nav from "../Nav/Nav";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <react.Fragment>
-            <Nav />
+            <Nav userInput={props.userInput} />
             <img
                 src={require("../../media/mehdi-pezhvak-nKjBbzQOI60-unsplash.webp")}
                 alt="food"

@@ -1,7 +1,13 @@
+import { useRef } from "react";
 import Button from "../UI/Button/Button";
 import styles from "./Item.module.css";
 
 const Item = (props) => {
+    const userNumber = useRef();
+    const submitHandler = (event) => {
+        event.preventDefault();
+        props.onUserInputFromItem(userNumber.current.value);
+    };
     return (
         <div className={styles.container}>
             <div className={styles.title__container}>
@@ -11,9 +17,9 @@ const Item = (props) => {
                 </h6>
                 <p className={styles.food__price}>{props.data.price} T</p>
             </div>
-            <form>
+            <form onSubmit={submitHandler}>
                 <label>Amount</label>
-                <input type="number" min="1" />
+                <input type="number" min="1" ref={userNumber} />
                 <Button className={styles.btn} />
             </form>
         </div>

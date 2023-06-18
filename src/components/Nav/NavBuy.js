@@ -1,6 +1,6 @@
 import styles from "./NavBuy.module.css";
 
-const NavBuy = () => {
+const NavBuy = (props) => {
     return (
         <div className={styles.container}>
             <svg
@@ -20,7 +20,7 @@ const NavBuy = () => {
                 />
             </svg>
             <h2>Your Cart</h2>
-            <h3 className={styles.number}>2</h3>
+            <h3 className={styles.number}>{props.userInput}</h3>
         </div>
     );
 };

@@ -1,4 +1,5 @@
-import react from "react";
+import react, { useState } from "react";
+import Cart from "./components/Cart/Cart";
 import Header from "./components/Header/Header";
 import DesriptionPart from "./components/Description/DescriptionPart";
 import ListItems from "./components/Items/ListItems";
@@ -36,11 +37,20 @@ const DATABASE = [
     },
 ];
 function App() {
+    const [userInput, setUserInput] = useState("");
+    const userInputFromListItemHandler = (userInput) => {
+        setUserInput(userInput);
+    };
+
     return (
         <react.Fragment>
-            <Header />
+            <Cart />
+            <Header userInput={userInput} />
             <DesriptionPart />
-            <ListItems datas={DATABASE} />
+            <ListItems
+                datas={DATABASE}
+                onUserInputFromListItem={userInputFromListItemHandler}
+            />
         </react.Fragment>
     );
 }
