@@ -5,7 +5,7 @@ import Nav from "../Nav/Nav";
 const Header = (props) => {
     return (
         <react.Fragment>
-            <Nav userInput={props.userInput} />
+            <Nav onCartShow={props.onCartShow} />
             <img
                 src={require("../../media/mehdi-pezhvak-nKjBbzQOI60-unsplash.webp")}
                 alt="food"

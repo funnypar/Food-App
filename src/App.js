@@ -37,20 +37,19 @@ const DATABASE = [
     },
 ];
 function App() {
-    const [userInput, setUserInput] = useState("");
-    const userInputFromListItemHandler = (userInput) => {
-        setUserInput(userInput);
+    const [cartStatus, setCartStatus] = useState(false);
+    const showCartHandler = () => {
+        setCartStatus(true);
     };
-
+    const hideCartHandler = () => {
+        setCartStatus(false);
+    };
     return (
         <react.Fragment>
-            <Cart />
-            <Header userInput={userInput} />
+            {cartStatus && <Cart onClose={hideCartHandler} />}
+            <Header onCartShow={showCartHandler} />
             <DesriptionPart />
-            <ListItems
-                datas={DATABASE}
-                onUserInputFromListItem={userInputFromListItemHandler}
-            />
+            <ListItems datas={DATABASE} />
         </react.Fragment>
     );
 }
