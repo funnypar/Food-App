@@ -1,8 +1,9 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Header/Header";
 import DesriptionPart from "./components/Description/DescriptionPart";
 import ListItems from "./components/Items/ListItems";
+import CartProvider from "./store/CartProvider";
 
 const DATABASE = [
     {
@@ -45,12 +46,12 @@ function App() {
         setCartStatus(false);
     };
     return (
-        <react.Fragment>
+        <CartProvider>
             {cartStatus && <Cart onClose={hideCartHandler} />}
             <Header onCartShow={showCartHandler} />
             <DesriptionPart />
             <ListItems datas={DATABASE} />
-        </react.Fragment>
+        </CartProvider>
     );
 }
 
