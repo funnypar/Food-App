@@ -6,7 +6,6 @@ const Item = (props) => {
     const userNumber = useRef();
     const submitHandler = (event) => {
         event.preventDefault();
-        props.onUserInputFromItem(userNumber.current.value);
     };
     return (
         <div className={styles.container}>

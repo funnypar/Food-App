@@ -1,6 +1,12 @@
+import { useContext } from "react";
+import CartContext from "../../store/Cart-Context";
 import styles from "./Nav.module.css";
 
 const Nav = (props) => {
+    const cartCtx = useContext(CartContext);
+    const numberOfItems = cartCtx.items.reduce((currentNumber, item) => {
+        return currentNumber + item.amount;
+    }, 0);
     return (
         <nav>
             <h1 className={styles.header}>IranianMeals</h1>
@@ -23,7 +29,7 @@ const Nav = (props) => {
                     />
                 </svg>
                 <h2>Your Cart</h2>
-                <h3 className={styles.number}>2</h3>
+                <h3 className={styles.number}>{numberOfItems}</h3>
             </div>
         </nav>
     );
