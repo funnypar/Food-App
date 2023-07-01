@@ -16,7 +16,9 @@ const Cart = (props) => {
                                 <p className={styles["item-price"]}>
                                     {item.price} T
                                 </p>
-                                <p className={styles["item-amount"]}>x1</p>
+                                <p className={styles["item-amount"]}>
+                                    x{item.amount}
+                                </p>
                             </div>
                         </div>
                         <div className={styles["btn-container"]}>
