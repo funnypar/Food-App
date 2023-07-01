@@ -10,31 +10,31 @@ const DATABASE = [
         id: "1e",
         title: "Kabab",
         structure: "High quality meat and onions",
-        price: "160,000",
+        price: 160000,
     },
     {
         id: "2e",
         title: "Joje",
         structure: "Chicken breast with special sauce",
-        price: "130,000",
+        price: 130000,
     },
     {
         id: "3e",
         title: "Ghorme Sabzi",
         structure: "Fragrant vegetables with beans, red meat and spices",
-        price: "190,000",
+        price: 190000,
     },
     {
         id: "4e",
         title: "Gheime",
         structure: "Red meat and cod with special stew",
-        price: "150,000",
+        price: 150000,
     },
     {
         id: "5e",
         title: "Mirzaghasemi",
         structure: "Eggplant with garlic and local curd",
-        price: "100,00",
+        price: 100000,
     },
 ];
 function App() {

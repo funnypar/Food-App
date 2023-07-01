@@ -1,18 +1,30 @@
+import { useContext } from "react";
+import CartContext from "../../store/Cart-Context";
 import Modal from "../UI/Modal/Modal";
 import styles from "./Cart.module.css";
 
 const Cart = (props) => {
+    const ctxCart = useContext(CartContext);
     const cardItems = (
         <ul className={styles["cart-items"]}>
-            {[
-                {
-                    id: "1e",
-                    title: "Kabab",
-                    structure: "High quality meat and onions",
-                    price: "160,000",
-                },
-            ].map((item) => {
-                return <li key={item.id}>{item.title}</li>;
+            {ctxCart.items.map((item) => {
+                return (
+                    <div className={styles.item} key={item.id}>
+                        <div className={styles["item-leftSide"]}>
+                            <li>{item.title}</li>
+                            <div className={styles["item-leftSide-down"]}>
+                                <p className={styles["item-price"]}>
+                                    {item.price} T
+                                </p>
+                                <p className={styles["item-amount"]}>x1</p>
+                            </div>
+                        </div>
+                        <div className={styles["btn-container"]}>
+                            <button className={styles["item-btn"]}>+</button>
+                            <button className={styles["item-btn"]}>-</button>
+                        </div>
+                    </div>
+                );
             })}
         </ul>
     );
@@ -21,7 +33,7 @@ const Cart = (props) => {
             {cardItems}
             <div className={styles.total}>
                 <span>Total Amount</span>
-                <span>450,000 T</span>
+                <span>{ctxCart.amountOfItems}</span>
             </div>
             <div className={styles.actions}>
                 <button
